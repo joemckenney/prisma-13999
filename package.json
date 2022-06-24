@@ -1,0 +1,14 @@
+{
+  "name": "company",
+  "version": "0.0.0",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "packages/**/*"
+    ]
+  },
+  "packageManager": "yarn@3.2.1",
+  "devDependencies": {
+    "turbo": "1.3.0"
+  }
+}

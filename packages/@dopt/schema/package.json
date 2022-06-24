@@ -1,0 +1,56 @@
+{
+  "name": "schema.packages.users.services",
+  "version": "0.0.0",
+  "description": "Contains the users's prisma schema and db scripts",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "👇required package scripts": "",
+    "build": "yarn generate; tsup;",
+    "clean": "shx rm -rf ./dist ./prisma/typebox",
+    "dev": "yarn run build --watch src",
+    "format": "echo \"schema.packages.users.services does not require format\"; exit 0;",
+    "formatcheck": "echo \"schema.packages.users.services does not require formatcheck\"; exit 0;",
+    "lint": "eslint .",
+    "test": "echo \"schema.packages.users.services does not require test\"; exit 0;",
+    "typecheck": "echo \"schema.packages.users.services does not require typecheck\"; exit 0;",
+    "☝️ required package scripts": "",
+    "generate": "dotenv-flow -- prisma generate",
+    "seed": "NODE_ENV=development dotenv-flow -- ts-node prisma/seed.ts",
+    "studio": "NODE_ENV=development dotenv-flow -- prisma studio",
+    "migrate-create": "NODE_ENV=development dotenv-flow -- prisma migrate dev",
+    "migrate-reset": "NODE_ENV=development dotenv-flow -- prisma migrate reset",
+    "db-push": "NODE_ENV=development dotenv-flow -- prisma db push",
+    "db-up": "docker-compose -f $(git rev-parse --show-toplevel)/docker-compose.dev.yml up users_postgres"
+  },
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "@types/bcrypt": "5.0.0",
+    "@types/node": "17.0.21",
+    "@typescript-eslint/eslint-plugin": "5.29.0",
+    "@typescript-eslint/parser": "5.29.0",
+    "esbuild": "0.14.47",
+    "eslint": "8.18.0",
+    "eslint-plugin-react": "7.30.0",
+    "prisma": "3.15.2",
+    "shx": "0.3.4",
+    "ts-node": "10.8.1",
+    "tsup": "6.1.2",
+    "typescript": "4.7.4"
+  },
+  "dependencies": {
+    "@prisma/client": "3.15.2",
+    "dotenv-flow": "3.2.0",
+    "dotenv-flow-cli": "1.0.0"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "$schema": "https://turborepo.org/schema.json",
+  "baseBranch": "origin/main",
+  "pipeline": {
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": [
+        "dist/**",
+        "client/dist/**",
+        ".next/**",
+        "prisma/typebox/**",
+        "src/parser.ts",
+        "app-client-sdk/src/**",
+        "app-server-sdk/src/**",
+        "user-service-sdk/src/**",
+        "block-service-sdk/src/**"
+      ]
+    },
+    "test": {
+      "dependsOn": [],
+      "outputs": []
+    },
+    "clean": {
+      "cache": false
+    },
+    "typecheck": {
+      "outputs": []
+    },
+    "format": {
+      "outputs": []
+    },
+    "formatcheck": {
+      "cache": false
+    },
+    "lint": {
+      "outputs": []
+    },
+    "dev": {
+      "cache": false
+    }
+  }
+}
