@@ -42,14 +42,14 @@
     "esbuild": "0.14.47",
     "eslint": "8.18.0",
     "eslint-plugin-react": "7.30.0",
-    "prisma": "3.15.2",
+    "prisma": "3.14.0",
     "shx": "0.3.4",
     "ts-node": "10.8.1",
     "tsup": "6.1.2",
     "typescript": "4.7.4"
   },
   "dependencies": {
-    "@prisma/client": "3.15.2",
+    "@prisma/client": "3.14.0",
     "dotenv-flow": "3.2.0",
     "dotenv-flow-cli": "1.0.0"
   }
